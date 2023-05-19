@@ -1,2 +1,10 @@
+# Enable checking of Commits
 enabled: true
-titleOnly: true
+
+# Check Pull Request and Commit title
+titleAndCommits: true
+# Every Commit must fit
+anyCommit: true
+
+# Allow revert commits
+allowRevertCommits: true
