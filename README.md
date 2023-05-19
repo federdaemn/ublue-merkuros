@@ -1,10 +1,12 @@
 # Starting point
 
-[![build-ublue](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml)
-
 This is a constantly updating template repository for creating [a native container image](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) designed to be customized however you want. GitHub will build your image for you, and then host it for you on [ghcr.io](https://github.com/features/packages). You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
 
 For more info, check out the [uBlue homepage](https://ublue.it/) and the [main uBlue repo](https://github.com/ublue-os/main/)
+
+## Warning
+
+[This](https://github.com/federdaemn/2.1-ublue-merkuros) is my private fork and not intendet for use by others. It is not guaranteed to be safe/stable or anything else. If you want to make your own look on the official [website](https://ublue.it) and [github repository](https://github.com/ublue-os/startingpoint).
 
 ## Getting started
 
@@ -86,14 +88,8 @@ If you want to completely disable yafti, simply set the recipe's `firstboot.yaft
 
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
-```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/startingpoint:latest
-```
-
-This repository builds date tags as well, so if you want to rebase to a particular day's build:
-
-```
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/startingpoint:20230403
+```bash
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/federdaemn/2.1-ublue-merkuros:latest
 ```
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
@@ -133,6 +129,8 @@ Check the [just website](https://just.systems) for tips on modifying and adding 
 
 These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
-    cosign verify --key cosign.pub ghcr.io/ublue-os/startingpoint
+```bash
+cosign verify --key cosign.pub ghcr.io/federdaemn/2.1-ublue-merkuros
+```
 
 If you're forking this repo, the uBlue website has [instructions](https://ublue.it/making-your-own/) for setting up signing properly.
