@@ -1,5 +1,7 @@
 # This file can only be edited inside the uBlue image's git repository.
 
+## Basic container settings
+
 # The image will be at "ghcr.io/yourusername/name".
 name: 2.1-ublue-merkuros
 
@@ -15,6 +17,8 @@ fedora-version: 38
 
 # This description will be visible in the container metadata.
 description:  MerkurOS - An immutable Fedora Desktop for federdaemn's needs.
+
+## Scripts
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -37,6 +41,8 @@ scripts:
     # Manually listed scripts.
     # - example_post.sh
 
+## Packages
+
 # Custom RPM configuration.
 # These changes will be integrated into your custom image at the "system level".
 rpm:
@@ -48,6 +54,9 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
+
+    # Own .repo file for official Visual Studio Code RPM
+    - https://federdaemn.github.io/2.1-general-scripts/other-repositories/federdaemn/2.1-ublue-merkuros/etc/yum.repos.d/vscode.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -61,9 +70,29 @@ rpm:
     # apps and binaries require it, so it's a good idea to always include it
     # if you ever download or compile any custom software on your machine.
     - libadwaita
+
     # Add your own below:
+    
     # Example:
     # - tilix
+
+    ## Editor
+    - neovim # Vim-fork focused on extensibility and agility
+    - code # Code editing. Redefined.
+
+    ## Shell
+    - zsh # Zsh shell
+
+    ## DE
+    - dconf-editor # Config editor
+    - gnome-shell-extension-pop-shell # GNOME shell extension for advanced tiling window management
+
+    ## git additions
+    - git-email # Git tools for sending patches via email
+    - gh # GitHub’s official command line tool
+
+    ## stay safe
+    - gnupg2 # Utility for secure communication and data storage
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
