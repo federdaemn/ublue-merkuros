@@ -83,6 +83,9 @@ rpm:
     ## Shell
     - zsh # Zsh shell
 
+    ## Term
+    - https://github.com/twpayne/chezmoi/releases/download/v2.33.6/chezmoi-2.33.6-x86_64.rpm #  Manage your dotfiles across multiple diverse machines, securely.
+
     ## DE
     - dconf-editor # Config editor
     - gnome-shell-extension-pop-shell # GNOME shell extension for advanced tiling window management
