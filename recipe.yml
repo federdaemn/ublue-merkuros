@@ -84,7 +84,7 @@ rpm:
     - zsh # Zsh shell
 
     ## Term
-    - https://github.com/twpayne/chezmoi/releases/download/v2.33.6/chezmoi-2.33.6-x86_64.rpm #  Manage your dotfiles across multiple diverse machines, securely.
+    - https://github.com/twpayne/chezmoi/releases/download/v2.34.0/chezmoi-2.34.0-x86_64.rpm #  Manage your dotfiles across multiple diverse machines, securely.
 
     ## DE
     - dconf-editor # Config editor
