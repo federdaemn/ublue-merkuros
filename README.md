@@ -6,7 +6,7 @@ For more info, check out the [uBlue homepage](https://ublue.it/) and the [main u
 
 ## Warning
 
-[This](https://github.com/federdaemn/2.1-ublue-merkuros) is my private fork and not intendet for use by others. It is not guaranteed to be safe/stable or anything else. If you want to make your own look on the official [website](https://ublue.it) and [github repository](https://github.com/ublue-os/startingpoint).
+[This](https://github.com/federdaemn/ublue-merkuros) is my private fork and not intendet for use by others. It is not guaranteed to be safe/stable or anything else. If you want to make your own look on the official [website](https://ublue.it) and [github repository](https://github.com/ublue-os/startingpoint).
 
 ## Getting started
 
@@ -89,7 +89,7 @@ If you want to completely disable yafti, simply set the recipe's `firstboot.yaft
 To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 ```bash
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/federdaemn/2.1-ublue-merkuros:latest
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/federdaemn/ublue-merkuros:latest
 ```
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
@@ -130,7 +130,7 @@ Check the [just website](https://just.systems) for tips on modifying and adding 
 These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/federdaemn/2.1-ublue-merkuros
+cosign verify --key cosign.pub ghcr.io/federdaemn/ublue-merkuros
 ```
 
 If you're forking this repo, the uBlue website has [instructions](https://ublue.it/making-your-own/) for setting up signing properly.
