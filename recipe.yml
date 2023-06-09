@@ -3,7 +3,7 @@
 ## Basic container settings
 
 # The image will be at "ghcr.io/yourusername/name".
-name: 2.1-ublue-merkuros
+name: ublue-merkuros
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
@@ -56,7 +56,7 @@ rpm:
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
 
     # Own .repo file for official Visual Studio Code RPM
-    - https://federdaemn.github.io/2.1-general-scripts/other-repositories/federdaemn/2.1-ublue-merkuros/etc/yum.repos.d/vscode.repo
+    - https://federdaemn.github.io/general-scripts/other-repositories/federdaemn/ublue-merkuros/etc/yum.repos.d/vscode.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
