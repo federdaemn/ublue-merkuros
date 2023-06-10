@@ -77,22 +77,14 @@ rpm:
     # - tilix
 
     ## Editor
-    - neovim # Vim-fork focused on extensibility and agility
     - code # Code editing. Redefined.
 
     ## Shell
     - zsh # Zsh shell
 
-    ## Term
-    - https://github.com/twpayne/chezmoi/releases/download/v2.34.0/chezmoi-2.34.0-x86_64.rpm #  Manage your dotfiles across multiple diverse machines, securely.
-
     ## DE
     - dconf-editor # Config editor
     - gnome-shell-extension-pop-shell # GNOME shell extension for advanced tiling window management
-
-    ## git additions
-    - git-email # Git tools for sending patches via email
-    - gh # GitHub’s official command line tool
 
     ## stay safe
     - gnupg2 # Utility for secure communication and data storage
