@@ -76,6 +76,10 @@ rpm:
     # Example:
     # - tilix
 
+    ## NVIDIA
+    - akmod-nvidia-390xx
+    - xorg-x11-drv-nvidia-390xx
+
     ## Editor
     - code # Code editing. Redefined.
 
